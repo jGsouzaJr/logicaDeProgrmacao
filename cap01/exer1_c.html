@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja</title>
+</head>
+<body>
+  <script>
+    const preco = Number(prompt("Valor da comprar?"))
+    
+    const desc = preco - (preco * 0.1)
+    const parc = Number(prompt('Deseja parcelar a comprar? máximo de parcelas é de 3 vezes !'))
+    const vezes = preco / parc
+    alert(`Preço R$: ${preco.toFixed(2)}\nÀ vista R$: ${desc.toFixed(2)}\nOu ${parc}x de R$: ${vezes.toFixed(2)}`)
+  </script>
+</body>
+</html>
