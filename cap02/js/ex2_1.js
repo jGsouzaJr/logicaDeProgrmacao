@@ -5,7 +5,7 @@ console.log(resp)
 
 frm.addEventListener('submit', (e)=>{
   const nome = frm.inNome.value  
-  resp.innerText = `Olá ${nome}`
+  resp.innerText = `Olá ${nome}, seja bem-vindo!`
   e.preventDefault()
 })
 
