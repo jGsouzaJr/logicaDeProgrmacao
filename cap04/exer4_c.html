@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa Eletrônico</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/exer4_c.js" defer></script>
+</head>
+<body>
+  <img src="img/ex4_6.jpg" alt="Caixa eletrônico">
+  <h1>Programa Caixa Eletrônico</h1>
+  <form action="">
+    <p>
+      <label for="saque">Valor do Saque: </label>
+      <input type="number" id="saque" min="10" required>      
+    </p>
+    <p>
+      <label for="">Deseja:</label>
+      <input type="radio" name="notas"  id="menor" required> <label for="menor">Em menos notas? </label> 
+      <input type="radio" name="notas" id="maior" required> <label for="maior"> Em diversas?</label>
+    </p>
+    <button>Notas disponíveis</button>
+  </form>
+
+  <h3 id="alta"></h3>
+  <h3 id="media"></h3>
+  <h3 id="baixa"></h3>
+
+</body>
+</html>
