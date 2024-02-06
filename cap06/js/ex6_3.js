@@ -31,8 +31,8 @@ frm.inLista.addEventListener("click", () => {
 });
 
 frm.inFiltrar.addEventListener('click',()=>{
-  // let maximo = Number(prompt('Qual o valor máximo que o cliente deseja pagar?'))
-  let maximo = Number(frm.inPreco.value)
+  let maximo = Number(prompt('Qual o valor máximo que o cliente deseja pagar?'))
+  // let maximo = Number(frm.inPreco.value)
 
   if(maximo == 0 || isNaN(maximo)){
     return
@@ -48,4 +48,21 @@ frm.inFiltrar.addEventListener('click',()=>{
     lista += `${car.modelo} - R$: ${car.preco.toFixed(2)}\n`
   }
   resp.innerText = `Carros até R$: ${maximo.toFixed(2)}\n${'-'.repeat(40)}\n${lista}`
+})
+
+frm.inPromocao.addEventListener('click', ()=>{
+  const desconto = Number(prompt('Qual o percentual de desconto:'))
+  if(desconto == 0 || isNaN(desconto)){
+    return
+  }
+
+  const carrosDesc = carros.map(v=>({
+    modelo: v.modelo,
+    preco: v.preco - (v.preco * desconto/100)
+  }))
+  lista = ''
+  for(const carro of carrosDesc){
+    lista+=`${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
+  }
+  resp.innerText = `Carros com desconto: ${desconto}%\n${'-'.repeat(40)}\n${lista}`
 })
