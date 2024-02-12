@@ -42,7 +42,7 @@ frm.inResumir.addEventListener('click', ()=>{
     if(idade == aux){
       nomes.push(nome)
     }else{
-      resumo += aux + 'anos(s): '+ nomes.length + ' criança(s)-'
+      resumo += aux + ' anos(s): '+ nomes.length + ' criança(s)- '
       resumo +=((nomes.length/copia.length)*100).toFixed(2)+'%\n'
       resumo +='('+nomes.join(', ')+')\n\n'
       aux = idade
@@ -50,7 +50,7 @@ frm.inResumir.addEventListener('click', ()=>{
       nomes.push(nome)
     }    
   }
-  resumo += aux + 'anos(s): '+ nomes.length + ' criança(s)-'
+  resumo += aux + ' anos(s): '+ nomes.length + ' criança(s)- '
   resumo +=((nomes.length/copia.length)*100).toFixed(2)+'%\n'
   resumo +='('+nomes.join(', ')+')\n\n'
   resp.innerText = resumo  
